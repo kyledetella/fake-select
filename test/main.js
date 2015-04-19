@@ -1,9 +1,9 @@
 'use strict';
 
 var expect = require('chai').expect;
-var FauxSelect = require('../main');
+var Fauxlect = require('../main');
 
-describe('FauxSelect', function () {
+describe('Fauxlect', function () {
   beforeEach(function () {
     this.fakeContainer = document.createElement('div');
 
@@ -15,14 +15,14 @@ describe('FauxSelect', function () {
   describe('constructor', function () {
     it('throws an error if no selector is provided', function () {
       var fn = function () {
-        return new FauxSelect();
+        return new Fauxlect();
       }
 
       expect(fn).to.throw;
     });
 
     it('sets properties', function () {
-      var fs = new FauxSelect({
+      var fs = new Fauxlect({
         selector: '#fake-element',
         options: []
       });

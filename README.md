@@ -1,4 +1,4 @@
-Faux Select
+Fauxlect
 ===========
 
 Easily create and manage a stylized `<select>` list.

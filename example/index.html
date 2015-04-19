@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    #container {
+      width: 160px;
+      height: 34px;
+      border: 1px dotted #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script src="../dist/faux.js"></script>
+  <script>
+    var fxs = new FauxSelect({
+      selector: '#container',
+      options: [
+        {value: '1', display: 'Jan'},
+        {value: '2', display: 'Fev'},
+        {value: '3', display: 'Mar'},
+        {value: '4', display: 'Apr'},
+      ]
+    });
+
+    console.log(fxs);
+  </script>
+</body>
+</html>

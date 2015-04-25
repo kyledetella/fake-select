@@ -4,7 +4,6 @@ var createOptionsList = require('./lib/create-options-list');
 var constants = require('./lib/constants');
 var focusClassRegExp = new RegExp(' ' + constants.FOCUS_CLASS, 'g');
 var defaultStyles = require('./lib/config/default-styles');
-var isFunction = require('lodash.isFunction');
 
 function noop() {};
 

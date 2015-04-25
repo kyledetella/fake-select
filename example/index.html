@@ -8,6 +8,12 @@
       width: 160px;
       height: 34px;
       border: 1px dotted #ddd;
+      background-color: #008AE6;
+      -webkit-transition: background-color 144ms ease-out;
+    }
+
+    #container.fauxcus {
+      background-color: #0070BA;
     }
   </style>
 </head>
@@ -23,7 +29,10 @@
         {value: '2', display: 'Feb'},
         {value: '3', display: 'Mar'},
         {value: '4', display: 'Apr'},
-      ]
+      ],
+      onComponentStateChange: function (payload) {
+        console.log('update:', payload);
+      }
     });
 
     console.log(fl);

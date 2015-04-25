@@ -7,6 +7,8 @@ Easily create and manage a stylized `<select>` list.
 
 ## Example
 
+Setup a container element for your component. The `<select>` list will be transparently injected into this node which means you can style this element as you wish.
+
 ```html
 <form>
   <label>Chicago's Teams</label>

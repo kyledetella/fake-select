@@ -7,6 +7,14 @@ Easily create and manage a stylized `<select>` list.
 
 ## Example
 
+### Get the library
+
+```
+npm install fauxlect
+```
+
+### Setup your DOM
+
 Setup a container element for your component. The `<select>` list will be transparently injected into this node which means you can style this element as you wish.
 
 ```html
@@ -15,6 +23,8 @@ Setup a container element for your component. The `<select>` list will be transp
   <div id="select-component"></div>
 </form>
 ```
+
+### Create your component
 
 ```javascript
 var Fauxlect = require('fauxlect');

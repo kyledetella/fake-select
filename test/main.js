@@ -143,4 +143,13 @@ describe('Fauxlect', function () {
         });
     });
   });
+
+  describe('getValue', function () {
+    it('returns a value and display', function () {
+      expect(this.instance.getValue()).to.deep.equal({
+        value: 'foo',
+        display: 'Foo'
+      });
+    });
+  });
 });

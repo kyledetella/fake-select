@@ -106,4 +106,13 @@ Fauxlect.prototype.handleBlur = function (event) {
   });
 }
 
+Fauxlect.prototype.getValue = function () {
+  var value = this.selectElement.value;
+
+  return {
+    value: value,
+    display: this.getDisplayFromValue(value)
+  }
+}
+
 module.exports = Fauxlect;

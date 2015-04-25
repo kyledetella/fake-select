@@ -62,7 +62,7 @@ var fauxlect = new Fauxlect({
 });
 ```
 
-## API & Configuration
+## Configuration
 
 ### `selector: String`
 
@@ -87,6 +87,12 @@ The `onComponentStateChange` callback provides you the ability to declare a hand
 | --- | ---- | ----------- |
 | `type` | `String` | A reference to the actual event which triggered the handler. These types include:<br />- `change`: The value of the select list has changed<br />- `focus`: The user has passed `focus` to the `select` list<br />- `blur`: The `select` list has lost focus<br />- `click`: The user has clicked the `select` list to open it |
 | `state` | `Object` | An object representing the current state of the component.<br />- `value`: The current value of the `select` element<br />- `display`: The string to display as the representation of the currently selected value |
+
+## API
+
+### `getValue: Function`
+
+Calling the `getValue` method on a `Fauxlext` instance will return the current `value` and `display` text of the select element.
 
 ## Managing State
 

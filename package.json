@@ -1,6 +1,6 @@
 {
   "name": "fauxlect",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Quickly create stylized select list components",
   "main": "main.js",
   "scripts": {

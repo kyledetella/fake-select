@@ -1,6 +1,8 @@
 Fauxlect
 ========
 
+[![Build Status](https://travis-ci.org/kyledetella/fauxlect.svg?branch=master)](https://travis-ci.org/kyledetella/fauxlect)
+
 **Note**: This library is currently under active development and is likely incomplete at the moment you are reading this.
 
 Easily create and manage a stylized `<select>` list.

@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title></title>
   <style>
-    #container {
+    #select-component {
+      position: relative; /* @TODO: Document this caveat */
       width: 160px;
       height: 34px;
       border: 1px dotted #ddd;
@@ -18,20 +19,34 @@
   </style>
 </head>
 <body>
-  <div id="container"></div>
+  <form action="">
+    <label for="select-component">Chicago's Teams</label>
+    <div id="select-component">
+      <span>Pick one</span>
+    </div>
+  </form>
 
   <script src="../dist/faux.js"></script>
   <script>
+    var selectComponentSelector = '#select-component';
+    var selectComponent = document.querySelector(selectComponentSelector);
+    var selectComponentDisplay = selectComponent.querySelector('span');
+
     var fl = new Fauxlect({
-      selector: '#container',
+      selector: selectComponentSelector,
       options: [
-        {value: '1', display: 'Jan'},
-        {value: '2', display: 'Feb'},
-        {value: '3', display: 'Mar'},
-        {value: '4', display: 'Apr'},
+        {value: '', display: 'Pick One'},
+        {value: 'bears', display: 'Chicago Bears'},
+        {value: 'blackhawks', display: 'Chicago Blackhawks'},
+        {value: 'bulls', display: 'Chicago Bulls'},
+        {value: 'cubs', display: 'Chicago Cubs'}
       ],
-      onComponentStateChange: function (payload) {
-        console.log('update:', payload);
+      onComponentStateChange: function (event) {
+        console.log('update:', event);
+
+        if (event.type === 'change') {
+          selectComponentDisplay.innerHTML = event.state.display;
+        }
       }
     });
 

@@ -13,6 +13,7 @@ describe('Fauxlect', function () {
 
     this.container.id = 'fake-element';
     this.container.className = DEFAULT_CLASS_NAME;
+    this.container.style.position = 'relative';
 
     document.body.appendChild(this.container);
   });
@@ -57,6 +58,7 @@ describe('Fauxlect', function () {
       this.container.style.width = '200px';
       this.container.style.height = '44px';
 
+      expect(style.position).to.equal('absolute');
       expect(style.width).to.equal('200px');
       expect(style.height).to.equal('44px');
       expect(style.webkitAppearance).to.equal('none');
@@ -72,9 +74,11 @@ describe('Fauxlect', function () {
       expect(this.defaultOptions.onComponentStateChange)
         .to.have.been
         .calledWithExactly({
-          state: {isOpen: false},
-          type: 'change',
-          value: 'foo'
+          state: {
+            value: 'foo',
+            display: 'Foo'
+          },
+          type: 'change'
         });
     });
   });
@@ -86,9 +90,11 @@ describe('Fauxlect', function () {
       expect(this.defaultOptions.onComponentStateChange)
         .to.have.been
         .calledWithExactly({
-          state: {isOpen: true},
-          type: 'click',
-          value: 'foo'
+          state: {
+            value: 'foo',
+            display: 'Foo'
+          },
+          type: 'click'
         });
     });
   });
@@ -106,9 +112,11 @@ describe('Fauxlect', function () {
       expect(this.defaultOptions.onComponentStateChange)
         .to.have.been
         .calledWithExactly({
-          state: {isOpen: false},
-          type: 'focus',
-          value: 'foo'
+          state: {
+            value: 'foo',
+            display: 'Foo'
+          },
+          type: 'focus'
         });
     });
   });
@@ -127,9 +135,11 @@ describe('Fauxlect', function () {
       expect(this.defaultOptions.onComponentStateChange)
         .to.have.been
         .calledWithExactly({
-          state: {isOpen: false},
-          type: 'blur',
-          value: 'foo'
+          state: {
+            value: 'foo',
+            display: 'Foo'
+          },
+          type: 'blur'
         });
     });
   });

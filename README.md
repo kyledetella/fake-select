@@ -43,11 +43,36 @@ var fauxlect = new Fauxlect({
 });
 ```
 
-## Setup
+## API & Configuration
 
-```
-npm i
-```
+### `selector: String`
+
+This is the argument that will be passed to `document.querySelector` to locate the DOM node.
+
+### `options: Array`
+
+This array declares the markup for the `options` list.
+
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| `value` | `String` | The value you expect to pass to your server when submitting the` form`. |
+| `display` | `String` | This is the display that will be set via `innerHTML` on the `option` element. |
+
+### `onComponentStateChange: Function`
+
+The `onComponentStateChange` callback provides you the ability to declare a handler and update your UI accordingly. `Fauxlect` makes no assumptions about your styling in any given state. Instead the library will provide you with the necessary event abstractions and data so that you retain full control over your experience.
+
+#### Events
+
+| Key | Type | Description |
+| --- | ---- | ----------- |
+| `type` | `String` | A reference to the actual event which triggered the handler. These types include:<br />- `change`: The value of the select list has changed<br />- `focus`: The user has passed `focus` to the `select` list<br />- `blur`: The `select` list has lost focus<br />- `click`: The user has clicked the `select` list to open it |
+| `state` | `Object` | An object representing the current state of the component.<br />- `value`: The current value of the `select` element<br />- `display`: The string to display as the representation of the currently selected value |
+
+### Caveats
+
+#### `position: relative`
+The container DOM node which you specify must have its `position` set to `relative`. The injected `select` tag will be positioned absolutely inside of this element to allow the content and styles you define to render naturally. If you need this element to be positioned absolutely in your layout, simply wrap the container and style the position of the wrapper.
 
 ## Development
 

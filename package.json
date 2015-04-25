@@ -1,17 +1,24 @@
 {
   "name": "faux-select",
   "version": "0.0.1",
-  "description": "Quickly create a stylized select list",
+  "description": "Quickly create stylized select list components",
   "main": "main.js",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start config/karma.js --single-run",
     "test-watch": "./node_modules/karma/bin/karma start config/karma.js",
     "watch": "mkdir -p dist && watchify main.js -s Fauxlect -d -o dist/faux.js -v & python -m SimpleHTTPServer ${PORT}"
   },
-  "author": "Kyle DeTella <kdetella@gmail.com>",
+  "author": {
+    "name": "Kyle DeTella",
+    "email": "kdetella@gmail.com"
+  },
+  "homepage": "https://github.com/kyledetella/fauxlect",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyledetella/fauxlect.git"
+  },
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^9.0.8",
     "chai": "^2.2.0",
     "gulp": "^3.8.11",
     "karma": "^0.12.31",

@@ -81,7 +81,7 @@ This array declares the markup for the `options` list.
 
 The `onComponentStateChange` callback provides you the ability to declare a handler and update your UI accordingly. `Fauxlect` makes no assumptions about your styling in any given state. Instead the library will provide you with the necessary event abstractions and data so that you retain full control over your experience.
 
-#### Events
+#### Payload
 
 | Key | Type | Description |
 | --- | ---- | ----------- |
